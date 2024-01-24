@@ -1,0 +1,141 @@
+:root {
+    /* Primary */
+    --color-Dark-cyan: hsl(158, 36%, 37%);
+    --color-Cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --color-Very-dark-blue: hsl(212, 21%, 14%);
+    --color-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* regular text font: 500, 700*/
+    font-family: 'Montserrat', sans-serif;
+
+    /* heading and price font: 700*/
+    /* font-family: 'Fraunces', serif; */
+
+    border: 1px solid black;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background-color: var(--color-Cream);
+    position: relative;
+}
+
+/* MAYBE CHANGE FROM FLEX TO GRID LAYOUT */
+
+main {
+    /* First time trying setting max-width to see how card looks on small screen sizes first and then changed to min-width */
+    min-width: 35rem;
+    width: 92%;
+    border-radius: 10px;
+    background-color: var(--color-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+main > * {
+    width: 87%;
+    margin-bottom: 2rem;
+}
+
+picture {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.gray-text {
+    color: var(--color-Dark-grayish-blue);
+}
+
+h4 {
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+}
+
+.new-price {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    color: var(--color-Dark-cyan);
+    margin-right: 2rem;
+}
+
+.old-price {
+    text-decoration-line: line-through;
+}
+
+button {
+    padding: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-Dark-cyan);
+    color: var(--color-White);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+button img {
+    margin-right: 1rem;
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* media queries */
+/* hover and focus states for interactive elements */
+@media (min-width: 550px) {
+    body {
+        background-color: pink;
+    }
+}
