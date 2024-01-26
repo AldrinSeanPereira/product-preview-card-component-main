@@ -26,33 +26,32 @@ html {
     font-size: 10px;
 }
 
-/* -----------------------PROBLEM AREA----------------------- */
-/* -----------------------PROBLEM AREA----------------------- */
-/* -----------------------PROBLEM AREA----------------------- */
+body,
+main.product-card {
+    display: grid;
+}
+
 body {
     min-height: 100vh;
     font-size: 1.4rem;
     background-color: var(--color-Cream);
     position: relative;
-    display: grid;
     justify-items: center;
     align-items: center;
 }
 
-.product-card {
-    width: 92%;
+main.product-card {
+    max-width: 35rem;
     margin: 3rem 0;
 }
 
-.product-card__img-half {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+.gray-text {
+    color: var(--color-Dark-grayish-blue);
 }
- /* I dont know how to remove the gap between the 2 halves of the card */
- /* Also not sure if I am using Grid concepts correctly */
+
+/* to see the picture elem when it causes issues*/
 picture {
-   background-color: red;
+    background-color: red;
 }
 
 .product-card__img {
@@ -61,20 +60,68 @@ picture {
     border-radius: 12px 12px 0 0;
 }
 
-/* -----------------------PROBLEM AREA----------------------- */
-/* -----------------------PROBLEM AREA----------------------- */
-/* -----------------------PROBLEM AREA----------------------- */
-
 .product-card__text-half {
     background-color: var(--color-White);
+    border-radius: 0 0 12px 12px;
+    padding: 2rem;
 }
 
 .product-card__ribbon-text {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: var(--color-Dark-grayish-blue);
+    margin-bottom: 1rem;
+}
+
+.product-card__title {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+}
+
+.product-card__title-group {
+    margin-bottom: 1rem;
+}
+
+.product-card__description {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-card__prices {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.product-card__new-price {
+    color: var(--color-Dark-cyan);
+    font-size: 2.5rem;
+    font-family: 'Fraunces', serif;
+    margin-right: 2rem;
+}
+
+.product-card__old-price {
+    font-size: 1.1rem;
+}
+
+.product-card__btn {
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-White);
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--color-Dark-cyan);
+}
+
+.product-card__cart-icon {
+    margin-right: 1rem;
 }
 
 /* ----------fully reusable, visually-hidden and screen-reader accessible CSS-------------- */
@@ -98,6 +145,7 @@ s::after {
     position: absolute;
     white-space: nowrap;
 }
+
 /* ------------------------------------------------------------------------ */
 
 .attribution {
