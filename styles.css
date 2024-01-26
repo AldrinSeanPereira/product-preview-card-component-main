@@ -19,106 +19,86 @@
     /* heading and price font: 700*/
     /* font-family: 'Fraunces', serif; */
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 html {
     font-size: 10px;
 }
 
+/* -----------------------PROBLEM AREA----------------------- */
+/* -----------------------PROBLEM AREA----------------------- */
+/* -----------------------PROBLEM AREA----------------------- */
 body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-size: 1.4rem;
     background-color: var(--color-Cream);
     position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
-/* MAYBE CHANGE FROM FLEX TO GRID LAYOUT */
-
-main {
-    /* First time trying setting max-width to see how card looks on small screen sizes first and then changed to min-width */
-    min-width: 35rem;
+.product-card {
     width: 92%;
-    border-radius: 10px;
-    background-color: var(--color-White);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 3rem 0;
 }
 
-main > * {
-    width: 87%;
-    margin-bottom: 2rem;
+.product-card__img-half {
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
-
+ /* I dont know how to remove the gap between the 2 halves of the card */
+ /* Also not sure if I am using Grid concepts correctly */
 picture {
-    width: 100%;
-    margin-bottom: 3rem;
+   background-color: red;
 }
 
-.main-img {
+.product-card__img {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    height: 100%;
+    border-radius: 12px 12px 0 0;
 }
 
-.gray-text {
+/* -----------------------PROBLEM AREA----------------------- */
+/* -----------------------PROBLEM AREA----------------------- */
+/* -----------------------PROBLEM AREA----------------------- */
+
+.product-card__text-half {
+    background-color: var(--color-White);
+}
+
+.product-card__ribbon-text {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--color-Dark-grayish-blue);
 }
 
-h4 {
-    letter-spacing: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+/* ----------fully reusable, visually-hidden and screen-reader accessible CSS-------------- */
+/* screen reader accessibility */
+s::before {
+    content: " [strike-through start] ";
 }
 
-h1 {
-    font-family: 'Fraunces', serif;
-    margin-bottom: 1.5rem;
+s::after {
+    content: " [strike-through end] ";
 }
 
-p {
-    line-height: 1.5;
+/* visually hiding accessibility text so only screen readers can find it */
+s::before,
+s::after {
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
 }
-
-.pricing {
-    display: flex;
-    align-items: center;
-}
-
-.new-price {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    color: var(--color-Dark-cyan);
-    margin-right: 2rem;
-}
-
-.old-price {
-    text-decoration-line: line-through;
-}
-
-button {
-    padding: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--color-Dark-cyan);
-    color: var(--color-White);
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2.5rem;
-}
-
-button img {
-    margin-right: 1rem;
-}
+/* ------------------------------------------------------------------------ */
 
 .attribution {
     font-size: 1.1rem;
@@ -134,8 +114,8 @@ button img {
 
 /* media queries */
 /* hover and focus states for interactive elements */
-@media (min-width: 550px) {
+/* @media (min-width: 550px) {
     body {
         background-color: pink;
     }
-}
+} */
