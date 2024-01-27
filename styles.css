@@ -45,19 +45,23 @@ main.product-card {
     margin: 3rem 0;
 }
 
+/*------------------ helper classes (start)----------------- */
 .gray-text {
     color: var(--color-Dark-grayish-blue);
 }
 
 /* to see the picture elem when it causes issues*/
-picture {
+/* picture {
     background-color: red;
-}
+} */
+
+/*------------------ helper classes (end)----------------- */
 
 .product-card__img {
     width: 100%;
     height: 100%;
     border-radius: 12px 12px 0 0;
+    object-fit: cover;
 }
 
 .product-card__text-half {
@@ -74,13 +78,13 @@ picture {
     margin-bottom: 1rem;
 }
 
+.product-card__title-group {
+    margin-bottom: 1rem;
+}
+
 .product-card__title {
     font-family: 'Fraunces', serif;
     font-size: 2.5rem;
-}
-
-.product-card__title-group {
-    margin-bottom: 1rem;
 }
 
 .product-card__description {
@@ -97,9 +101,9 @@ picture {
 
 .product-card__new-price {
     color: var(--color-Dark-cyan);
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-family: 'Fraunces', serif;
-    margin-right: 2rem;
+    margin-right: 1.7rem;
 }
 
 .product-card__old-price {
@@ -124,8 +128,8 @@ picture {
     margin-right: 1rem;
 }
 
-/* ----------fully reusable, visually-hidden and screen-reader accessible CSS-------------- */
-/* screen reader accessibility */
+/* ---------------------accessibility code for pricing (start)---------------- */
+/* screen reader accessibility text */
 s::before {
     content: " [strike-through start] ";
 }
@@ -146,7 +150,7 @@ s::after {
     white-space: nowrap;
 }
 
-/* ------------------------------------------------------------------------ */
+/* ---------------------accessibility code for pricing (end)---------------- */
 
 .attribution {
     font-size: 1.1rem;
@@ -160,10 +164,60 @@ s::after {
 }
 
 
-/* media queries */
-/* hover and focus states for interactive elements */
-/* @media (min-width: 550px) {
-    body {
-        background-color: pink;
+/* ------------------------media queries (start)--------------------------- */
+@media (min-width: 550px) {
+    /* * {
+        border: 1px solid black;
+    } */
+
+    main.product-card {
+        max-width: 51rem;
+        margin: 3rem 0;
+        grid-template-columns: repeat(2, 1fr);
     }
-} */
+
+    .product-card__img {
+        border-radius: 12px 0 0 12px;
+    }
+
+    .product-card__text-half {
+        border-radius: 0 12px 12px 0;
+        padding: 2.8rem;
+    }
+
+    .product-card__ribbon-text {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card__title-group {
+        margin-bottom: 2rem;
+    }
+
+    .product-card__title {
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+    }
+
+    .product-card__description {
+        line-height: 2rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .product-card__prices {
+        margin-bottom: 2.4rem;
+    }
+
+    .product-card__btn {
+        padding: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .product-card__cart-icon {
+        margin-right: 1rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    /* hover and focus states for interactive elements */
+
+}
