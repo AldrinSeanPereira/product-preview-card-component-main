@@ -219,5 +219,12 @@ s::after {
     }
 
     /* hover and focus states for interactive elements */
+    .product-card__btn:hover {
+        background-color: var(--color-Dark-grayish-blue);
+    }
 
+    .product-card__btn:active {
+        background-color: var(--color-Very-dark-blue);
+        cursor: pointer;
+    }
 }
